@@ -29,7 +29,7 @@ class AdminLoginController extends Controller
 
 
         if(Auth::guard('admin')->attempt($credential)){
-            return redirect()->route('home');
+            return redirect()->route('dashboard');
         }else{
            return redirect()->route('login')->with('error', 'Invalid Info!, Please Try Again');
         }

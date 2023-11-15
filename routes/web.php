@@ -4,8 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminProfileController;
+use App\Http\Controllers\Front\HomeController;
 
-Route::get('admin/home', [AdminHomeController::class, 'index'])->name('home')->middleware('admin:admin');
+Route::get('admin/dashboard', [AdminHomeController::class, 'index'])->name('dashboard')->middleware('admin:admin');
 
 Route::get('admin/login', [AdminLoginController::class, 'login'])->name('login');
 Route::post('admin/login-submit', [AdminLoginController::class, 'loginSubmit'])->name('loginSubmit');
@@ -22,6 +23,10 @@ Route::post('admin/reset-password-submit', [AdminLoginController::class, 'resetP
 Route::get('admin/profile-edit', [AdminProfileController::class, 'editProfile'])->name('editProfile')->middleware('admin:admin');
 Route::post('admin/profile-update', [AdminProfileController::class, 'updateProfile'])->name('updateProfile')->middleware('admin:admin');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * Frontend Route
+ */
+
+ Route::get('/', [HomeController::class, 'HomePage'])->name('home');
+
+

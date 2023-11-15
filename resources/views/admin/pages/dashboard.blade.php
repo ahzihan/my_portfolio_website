@@ -6,5 +6,5 @@
     Home Page
 @endsection
 @section('content')
-    @include('admin.components.home.Dashboard')
+    @include('admin.components.dashboard.Dashboard')
 @endsection
