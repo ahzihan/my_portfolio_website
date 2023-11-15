@@ -6,6 +6,11 @@ use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Front\HomeController;
 
+
+/**
+ * Admin Route
+ */
+
 Route::get('admin/dashboard', [AdminHomeController::class, 'index'])->name('dashboard')->middleware('admin:admin');
 
 Route::get('admin/login', [AdminLoginController::class, 'login'])->name('login');
