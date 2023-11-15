@@ -17,7 +17,7 @@
                         </ul>
                     </div>
                     <div class="copyright">
-                        Copright 2022, company name. All Rights Reserved.
+                        Copright 2023, ahzihan. All Rights Reserved.
                     </div>
                 </div>
             </div>

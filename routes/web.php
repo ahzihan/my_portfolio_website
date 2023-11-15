@@ -4,8 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminProfileController;
+use App\Http\Controllers\Front\AboutController;
+use App\Http\Controllers\Front\BlogController;
+use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\HomeController;
-
+use App\Http\Controllers\Front\PortfolioController;
+use App\Http\Controllers\Front\ServiceController;
 
 /**
  * Admin Route
@@ -33,5 +37,10 @@ Route::post('admin/profile-update', [AdminProfileController::class, 'updateProfi
  */
 
  Route::get('/', [HomeController::class, 'HomePage'])->name('home');
+ Route::get('/about', [AboutController::class, 'AboutPage'])->name('about');
+ Route::get('/service', [ServiceController::class, 'ServicePage'])->name('service');
+ Route::get('/blog', [BlogController::class, 'BlogPage'])->name('blog');
+ Route::get('/contact', [ContactController::class, 'ContactPage'])->name('contact');
+ Route::get('/portfolio', [PortfolioController::class, 'PortfolioPage'])->name('portfolio');
 
 
