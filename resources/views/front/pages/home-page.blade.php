@@ -1,4 +1,8 @@
 @extends('front.layout.master')
+
+@section('page-title')
+    Home
+@endsection
 @section('content')
     @include('front.components.Navbar')
     @include('front.components.Hero')
