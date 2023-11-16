@@ -3,21 +3,20 @@
         <div class="row">
             <div class="col-md-6 d-flex align-items-center">
                 <div class="left">
-                    <h4>Hello, I'm</h4>
-                    <h2>Morshedul Arefin</h2>
-                    <h3>Professional Web Developer</h3>
+                    <h4>{{ $bannerInfo->bnr_title }}</h4>
+                    <h2>{{ $bannerInfo->bnr_person_name }}</h2>
+                    <h3>{{ $bannerInfo->bnr_person_designation }}</h3>
                     <p>
-                        I am 25 years old web designer & developer; and working to build websites for my international
-                        clients.
+                        {{ $bannerInfo->bnr_description }}
                     </p>
                     <div class="button">
-                        <a href="contact.html" class="btn btn-primary">Hire Me</a>
+                        <a href="{{ $bannerInfo->bnr_btn_url }}" class="btn btn-primary">{{ $bannerInfo->bnr_btn_text }}</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="right">
-                    <img src="{{ asset('front/images/man.png') }}" alt="">
+                    <img src="{{ asset('uploads/'.$bannerInfo->bnr_photo) }}" alt="">
                 </div>
             </div>
         </div>
