@@ -1,10 +1,10 @@
 @extends('admin.layout.app')
 @section('page-title')
-    Banner
+    Social
 @endsection
 @section('title')
-    Update Banner Info
+    Update Social Link
 @endsection
 @section('content')
-    @include('admin.components.banner.UpdateBanner')
+    @include('admin.components.social.UpdateSocial')
 @endsection

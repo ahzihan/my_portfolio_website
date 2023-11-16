@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutBackendController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\BlogController;
 use App\Http\Controllers\Front\ContactController;
@@ -16,6 +18,8 @@ use App\Http\Controllers\Front\ServiceController;
  * Admin Route
  */
 Route::resource('banner', BannerController::class);
+Route::resource('aboutInfo', AboutBackendController::class);
+Route::resource('social', SocialController::class);
 
 
 Route::get('admin/dashboard', [AdminHomeController::class, 'index'])->name('dashboard')->middleware('admin:admin');

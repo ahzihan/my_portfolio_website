@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <label class="form-label">Description</label>
-                                    <textarea class="form-control" name="bnr_description" id="" cols="30" rows="5">{{ $bannerInfo->bnr_description }}</textarea>
+                                    <textarea class="form-control" style="height: 60px;" name="bnr_description" id="" cols="30" rows="5">{{ $bannerInfo->bnr_description }}</textarea>
                                 </div>
                                 <div class="mb-4">
                                     <label class="form-label"></label>

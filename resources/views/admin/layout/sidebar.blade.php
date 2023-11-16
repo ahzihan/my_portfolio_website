@@ -14,7 +14,20 @@
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i><span>Banner Section</span></a>
             <ul class="dropdown-menu">
                 <li class="active"><a class="nav-link" href="{{ route('banner.index') }}"><i class="fas fa-angle-right"></i> Banner Update</a></li>
-                <li class=""><a class="nav-link" href=""><i class="fas fa-angle-right"></i> Item 2</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown {{ Request::is('aboutInfo.index') ? "active" : "" }}">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i><span>About Section</span></a>
+            <ul class="dropdown-menu">
+                <li class="active"><a class="nav-link" href="{{ route('aboutInfo.index') }}"><i class="fas fa-angle-right"></i> About Update</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown {{ Request::is('social.index') ? "active" : "" }}">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i><span>Social Section</span></a>
+            <ul class="dropdown-menu">
+                <li class="active"><a class="nav-link" href="{{ route('social.index') }}"><i class="fas fa-angle-right"></i> Social Update</a></li>
             </ul>
         </li>
 
