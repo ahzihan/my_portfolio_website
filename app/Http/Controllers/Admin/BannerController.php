@@ -12,7 +12,6 @@ class BannerController extends Controller
     public function index()
     {
         $bannerInfo = Banner::where('id', 1)->first();
-
         return view('admin.pages.banner', compact('bannerInfo'));
     }
 

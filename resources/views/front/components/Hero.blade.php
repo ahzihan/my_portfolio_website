@@ -10,7 +10,7 @@
                         {{ $bannerInfo->bnr_description }}
                     </p>
                     <div class="button">
-                        <a href="{{ $bannerInfo->bnr_btn_url }}" class="btn btn-primary">{{ $bannerInfo->bnr_btn_text }}</a>
+                        <a href="{{ route('contact') }}" class="btn btn-primary">{{ $bannerInfo->bnr_btn_text }}</a>
                     </div>
                 </div>
             </div>
