@@ -6,14 +6,34 @@
 @section('content')
     @include('front.components.Navbar')
     @include('front.components.Hero')
-    @include('front.components.About')
-    @include('front.components.Skill')
-    @include('front.components.Qualification')
-    @include('front.components.Service')
-    @include('front.components.Counter')
-    @include('front.components.Portfolio')
-    @include('front.components.Testimonial')
-    @include('front.components.Blog')
-    @include('front.components.Client')
+
+    @if ($aboutInfo->status =='1')
+       @include('front.components.About')
+    @endif
+    {{-- @if ($skillInfo->status =='1') --}}
+        @include('front.components.Skill')
+    {{-- @endif
+    @if ($qualiInfo->status =='1') --}}
+        @include('front.components.Qualification')
+    {{-- @endif
+    @if ($serviceInfo->status =='1') --}}
+        @include('front.components.Service')
+    {{-- @endif
+    @if ($contactInfo->status =='1') --}}
+        @include('front.components.Counter')
+    {{-- @endif
+    @if ($portfolioInfo->status =='1') --}}
+       @include('front.components.Portfolio')
+    {{-- @endif
+    @if ($testimonialInfo->status =='1') --}}
+       @include('front.components.Testimonial')
+    {{-- @endif
+    @if ($blogInfo->status =='1') --}}
+       @include('front.components.Blog')
+    {{-- @endif
+    @if ($clientInfo->status =='1') --}}
+       @include('front.components.Client')
+    {{-- @endif --}}
+
     @include('front.components.Footer')
 @endsection

@@ -28,11 +28,13 @@ class SocialController extends Controller
 
         $socialInfo->facebook=$request->facebook;
         $socialInfo->linkedin=$request->linkedin;
+        $socialInfo->instagram=$request->instagram;
         $socialInfo->twitter=$request->twitter;
         $socialInfo->github=$request->github;
         $socialInfo->youtube=$request->youtube;
         $socialInfo->instagram=$request->instagram;
         $socialInfo->weblink=$request->weblink;
+        $socialInfo->status=$request->status;
         $socialInfo->update();
 
         return redirect()->back()->with('success', 'Social Info Updated Successfully');

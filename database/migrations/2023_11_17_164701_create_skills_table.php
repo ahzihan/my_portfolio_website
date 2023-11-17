@@ -11,15 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('socials', function (Blueprint $table) {
+        Schema::create('skills', function (Blueprint $table) {
             $table->id();
-            $table->string('facebook')->nullable();
-            $table->string('linkedin')->nullable();
-            $table->string('twitter')->nullable();
-            $table->string('github')->nullable();
-            $table->string('instagram')->nullable();
-            $table->string('youtube')->nullable();
-            $table->string('weblink')->nullable();
+            $table->string('title');
+            $table->string('sub_title')->nullable();
+            $table->string('skill_name');
+            $table->string('score');
+            $table->string('position')->nullable();
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('socials');
+        Schema::dropIfExists('skills');
     }
 };

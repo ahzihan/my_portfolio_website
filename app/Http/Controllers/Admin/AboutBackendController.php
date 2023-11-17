@@ -54,6 +54,7 @@ class AboutBackendController extends Controller
         $aboutInfo->phone=$request->phone;
         $aboutInfo->sort_description=$request->sort_description;
         $aboutInfo->long_description=$request->long_description;
+        $aboutInfo->status=$request->status;
         $aboutInfo->update();
 
         return redirect()->back()->with('success', 'About Info Updated Successfully');

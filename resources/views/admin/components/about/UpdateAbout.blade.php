@@ -33,11 +33,18 @@
                                 </div>
                                 <div class="mb-4">
                                     <label class="form-label">Sort Description</label>
-                                    <textarea class="form-control" style="height: 60px;"  name="sort_description" id="" cols="30" rows="7">{{ $aboutInfo->sort_description }}</textarea>
+                                    <textarea class="form-control" style="height: 60px;"  name="sort_description" id="" cols="30" rows="7">{!! $aboutInfo->sort_description !!}</textarea>
                                 </div>
                                 <div class="mb-4">
                                     <label class="form-label">Long Description</label>
-                                    <textarea class="form-control" style="height: 200px;" name="long_description" id="" cols="30" rows="10">{{ $aboutInfo->long_description }}</textarea>
+                                    <textarea class="form-control" style="height: 200px;" name="long_description" id="" cols="30" rows="10">{!! $aboutInfo->long_description !!}</textarea>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label">Status </label>
+                                    <select name="status" class="form-select">
+                                        <option value="1" @if($aboutInfo->status==1) selected @endif>Show</option>
+                                        <option value="0" @if ($aboutInfo->status==0) selected @endif>Hide</option>
+                                    </select>
                                 </div>
                                 <div class="mb-4">
                                     <label class="form-label"></label>

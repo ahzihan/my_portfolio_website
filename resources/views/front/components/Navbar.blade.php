@@ -10,22 +10,22 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('home') }}">Home</a>
+                        <a class="nav-link {{ Request::is('/') ? "active" : "" }}" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('about') }}">About</a>
+                        <a class="nav-link {{ Request::is('about') ? "active" : "" }}" href="{{ route('about') }}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('service') }}">Services</a>
+                        <a class="nav-link {{ Request::is('service') ? "active" : "" }}" href="{{ route('service') }}">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('portfolio') }}">Portfolio</a>
+                        <a class="nav-link {{ Request::is('portfolio') ? "active" : "" }}" href="{{ route('portfolio') }}">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('blog') }}">Blog</a>
+                        <a class="nav-link {{ Request::is('blog') ? "active" : "" }}" href="{{ route('blog') }}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                        <a class="nav-link {{ Request::is('contact') ? "active" : "" }}" href="{{ route('contact') }}">Contact</a>
                     </li>
                     <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

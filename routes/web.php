@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminProfileController;
+use App\Http\Controllers\Admin\BackendSkillController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Front\AboutController;
@@ -20,6 +21,7 @@ use App\Http\Controllers\Front\ServiceController;
 Route::resource('banner', BannerController::class);
 Route::resource('aboutInfo', AboutBackendController::class);
 Route::resource('social', SocialController::class);
+Route::resource('skill', BackendSkillController::class);
 
 
 Route::get('admin/dashboard', [AdminHomeController::class, 'index'])->name('dashboard')->middleware('admin:admin');

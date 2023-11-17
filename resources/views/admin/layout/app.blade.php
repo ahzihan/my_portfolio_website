@@ -29,8 +29,11 @@
 
             <div class="main-content">
                 <section class="section">
-                    <div class="section-header">
+                    <div class="section-header d-flex justify-content-between">
                         <h1>@yield('title')</h1>
+                        <div class="ml-auto">
+                            @yield('top_button')
+                        </div>
                     </div>
                     @yield('content')
                 </section>

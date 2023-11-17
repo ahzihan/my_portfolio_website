@@ -31,6 +31,14 @@
             </ul>
         </li>
 
+        <li class="nav-item dropdown {{ Request::is('skill.index') ? "active" : "" }}">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i><span>Skill Section</span></a>
+            <ul class="dropdown-menu">
+                <li class="active"><a class="nav-link" href="{{ route('skill.index') }}"><i class="fas fa-angle-right"></i> Skill List</a></li>
+                <li class="active"><a class="nav-link" href="{{ route('skill.create') }}"><i class="fas fa-angle-right"></i> Add New Skill</a></li>
+            </ul>
+        </li>
+
         <li class=""><a class="nav-link" href="setting.html"><i class="fas fa-hand-point-right"></i>
                 <span>Setting</span></a></li>
 
