@@ -40,21 +40,24 @@ class BackendSkillController extends Controller
             'status' => $request->status
         ]);
 
-
-        return redirect()->back()->with('success', 'Skill Info Updated Successfully');
+        return redirect()->route('skill.index')->with('success', 'Skill Info Inserted Successfully');
     }
 
 
     public function show(string $id)
     {
-        //
+        $skillId = Skill::where('id', $id)->first();
+        $skillId->delete();
+
+        return redirect()->route('skill.index')->with('success', 'Skill Info Deleted Successfully');
     }
 
 
     public function edit(string $id)
     {
+
         $skillInfo=Skill::find($id);
-        return view('pages.skill-edit',compact('skillInfo'));
+        return view('admin.pages.skill-edit',compact('skillInfo'));
     }
 
 
@@ -75,16 +78,18 @@ class BackendSkillController extends Controller
         $skillInfo->status=$request->status;
         $skillInfo->update();
 
-        return redirect()->back()->with('success', 'Skill Info Updated Successfully');
-    }
-
-
-    public function destroy(string $id)
-    {
-        $skillId = Skill::find($id);
-        $skillId->delete();
-
-        return redirect()->back()->with('success', 'Skill Info Deleted Successfully');
+        return redirect()->route('skill.index')->with('success', 'Skill Info Updated Successfully');
 
     }
+
+
+    // public function destroy($id)
+    // {
+    //     dd($id);
+    //     $skillId = Skill::where('id', $id)->first();
+    //     $skillId->delete();
+
+    //     return redirect()->route('skill.index')->with('success', 'Skill Info Deleted Successfully');
+
+    // }
 }

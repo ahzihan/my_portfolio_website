@@ -6,48 +6,27 @@
                     <h3>My Expertise Area</h3>
                 </div>
                 <div class="col-md-6 wow fadeInLeft">
-
-                    <div class="progress-text">Photoshop</div>
-                    <div class="progress">
-                        <div class="progress-bar w-70-p w-0" role="progressbar" aria-label="Example with label" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-                    </div>
-
-                    <div class="progress-text">Illustrator</div>
-                    <div class="progress">
-                        <div class="progress-bar w-80-p w-0" role="progressbar" aria-label="Example with label" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-                    </div>
-
-                    <div class="progress-text">Graphic Design</div>
-                    <div class="progress">
-                        <div class="progress-bar w-65-p w-0" role="progressbar" aria-label="Example with label" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
-                    </div>
-
-                    <div class="progress-text">Search Engine Optimization</div>
-                    <div class="progress">
-                        <div class="progress-bar w-55-p w-0" role="progressbar" aria-label="Example with label" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">55%</div>
-                    </div>
+                    @php $i=0; @endphp
+                    @foreach ($skillLeft as $left)
+                    @php $i++; @endphp
+                        <div class="progress-text">{{ $left->skill_name }}</div>
+                        <div class="progress">
+                            <div class="progress-bar anim_left{{ $i }} w-0" role="progressbar" aria-label="Example with label" aria-valuenow="{{ $left->score }}" aria-valuemin="0" aria-valuemax="100">{{ $left->score }}%</div>
+                        </div>
+                    @endforeach
                 </div>
                 <div class="col-md-6 wow fadeInRight">
-                    <div class="progress-text">Laravel</div>
-                    <div class="progress">
-                        <div class="progress-bar w-70-p w-0" role="progressbar" aria-label="Example with label" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-                    </div>
-
-                    <div class="progress-text">WordPress</div>
-                    <div class="progress">
-                        <div class="progress-bar w-80-p w-0" role="progressbar" aria-label="Example with label" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-                    </div>
-
-                    <div class="progress-text">Python</div>
-                    <div class="progress">
-                        <div class="progress-bar w-65-p w-0" role="progressbar" aria-label="Example with label" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
-                    </div>
-
-                    <div class="progress-text">Java</div>
-                    <div class="progress">
-                        <div class="progress-bar w-55-p w-0" role="progressbar" aria-label="Example with label" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">55%</div>
-                    </div>
+                    @php $i=0; @endphp
+                    @foreach ($skillRight as $item)
+                    @php $i++; @endphp
+                        <div class="progress-text">{{ $item->skill_name }}</div>
+                        <div class="progress">
+                            <div class="progress-bar anim_right{{ $i }} w-0" role="progressbar" aria-label="Example with label" aria-valuenow="{{ $item->score }}" aria-valuemin="0" aria-valuemax="100">{{ $item->score }}%</div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
+
+

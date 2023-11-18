@@ -10,10 +10,10 @@
     @if ($aboutInfo->status =='1')
        @include('front.components.About')
     @endif
-    {{-- @if ($skillInfo->status =='1') --}}
+    {{-- @if ($skillLeft->status =='1' || $skillRight->status =='1') --}}
         @include('front.components.Skill')
-    {{-- @endif
-    @if ($qualiInfo->status =='1') --}}
+    {{-- @endif --}}
+    {{-- @if ($qualiInfo->status =='1') --}}
         @include('front.components.Qualification')
     {{-- @endif
     @if ($serviceInfo->status =='1') --}}
@@ -36,4 +36,24 @@
     {{-- @endif --}}
 
     @include('front.components.Footer')
+@endsection
+
+@section('animation')
+
+@php $i=0; @endphp
+@foreach ($skillLeft as $item)
+@php $i++; @endphp
+    <script>
+        $(".anim_left{{ $i }}").animate({width: "{{$item->score}}%"}, 2500);
+    </script>
+@endforeach
+
+@php $i=0; @endphp
+@foreach ($skillRight as $item)
+@php $i++; @endphp
+    <script>
+        $(".anim_right{{ $i }}").animate({width: "{{$item->score}}%"}, 2500);
+    </script>
+@endforeach
+
 @endsection

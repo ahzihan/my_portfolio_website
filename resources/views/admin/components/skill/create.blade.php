@@ -10,11 +10,11 @@
                                 <div class="row">
                                     <div class="mb-4 col-md-6">
                                         <label class="form-label">Title</label>
-                                        <input type="text" class="form-control" name="title" value="{{ $skillInfo->title }}">
+                                        <input type="text" class="form-control" name="title" value="{{ $skillInfo->title }}" @if($skillInfo->title) @readonly(true)@endif>
                                     </div>
                                     <div class="mb-4 col-md-6">
                                         <label class="form-label">Sub Title</label>
-                                        <input type="text" class="form-control" name="sub_title" value="{{ $skillInfo->sub_title }}">
+                                        <input type="text" class="form-control" name="sub_title" value="{{ $skillInfo->sub_title }}" @if($skillInfo->sub_title) @readonly(true)@endif>
                                     </div>
                                 </div>
 

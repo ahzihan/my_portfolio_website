@@ -26,6 +26,6 @@
     </a>
 
     @include('front.layout.script')
-
+    @yield('animation')
 </body>
 </html>
