@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Front;
 
 use App\Models\About;
+use App\Models\Skill;
 use App\Models\Banner;
 use App\Models\Social;
+use App\Models\Education;
+use App\Models\Experience;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Skill;
 
 class HomeController extends Controller
 {
@@ -18,6 +20,8 @@ class HomeController extends Controller
         $data['socialInfo'] = Social::where('id', 1)->first();
         $data['skillLeft'] = Skill::where('position','Left')->get();
         $data['skillRight'] = Skill::where('position','Right')->get();
+        $data['eduInfo'] = Education::orderBy('item_order', 'asc')->get();
+        $data['expInfo'] = Experience::orderBy('item_order', 'asc')->get();
 
         return view('front.pages.home-page',$data);
     }

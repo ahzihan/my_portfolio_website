@@ -39,6 +39,22 @@
             </ul>
         </li>
 
+        <li class="nav-item dropdown {{ Request::is('education.index') ? "active" : "" }}">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i><span>Education Section</span></a>
+            <ul class="dropdown-menu">
+                <li class="active"><a class="nav-link" href="{{ route('education.index') }}"><i class="fas fa-angle-right"></i> Education List</a></li>
+                <li class="active"><a class="nav-link" href="{{ route('education.create') }}"><i class="fas fa-angle-right"></i> Add New Education</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown {{ Request::is('experience.index') ? "active" : "" }}">
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i><span>experience Section</span></a>
+            <ul class="dropdown-menu">
+                <li class="active"><a class="nav-link" href="{{ route('experience.index') }}"><i class="fas fa-angle-right"></i> Experience List</a></li>
+                <li class="active"><a class="nav-link" href="{{ route('experience.create') }}"><i class="fas fa-angle-right"></i> Add New Experience</a></li>
+            </ul>
+        </li>
+
         <li class=""><a class="nav-link" href="setting.html"><i class="fas fa-hand-point-right"></i>
                 <span>Setting</span></a></li>
 

@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Http\Controllers\Controller;
+use App\Models\Social;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class BlogController extends Controller
 {
     public function BlogPage(){
-        return view('front.pages.blog-page');
+        $data['socialInfo'] = Social::where('id', 1)->first();
+
+        return view('front.pages.blog-page',$data);
     }
 }

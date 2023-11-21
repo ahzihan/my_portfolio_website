@@ -12,14 +12,14 @@ class BackendSkillController extends Controller
     public function index()
     {
         $skills = Skill::all();
-        return view('admin.pages.skill-list', compact('skills'));
+        return view('admin.pages.skill.skill-list', compact('skills'));
     }
 
 
     public function create()
     {
         $skillInfo = Skill::where('id', 1)->first();
-        return view('admin.pages.skill-create', compact('skillInfo'));
+        return view('admin.pages.skill.skill-create', compact('skillInfo'));
     }
 
 
@@ -57,7 +57,7 @@ class BackendSkillController extends Controller
     {
 
         $skillInfo=Skill::find($id);
-        return view('admin.pages.skill-edit',compact('skillInfo'));
+        return view('admin.pages.skill.skill-edit',compact('skillInfo'));
     }
 
 

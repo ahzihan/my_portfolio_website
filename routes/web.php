@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutBackendController;
+use App\Http\Controllers\Admin\AdminEducationController;
+use App\Http\Controllers\Admin\AdminExperienceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\AdminHomeController;
@@ -22,6 +24,8 @@ Route::resource('banner', BannerController::class);
 Route::resource('aboutInfo', AboutBackendController::class);
 Route::resource('social', SocialController::class);
 Route::resource('skill', BackendSkillController::class);
+Route::resource('education', AdminEducationController::class);
+Route::resource('experience', AdminExperienceController::class);
 
 
 Route::get('admin/dashboard', [AdminHomeController::class, 'index'])->name('dashboard')->middleware('admin:admin');
