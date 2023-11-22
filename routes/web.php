@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\BackendSkillController;
 use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\BlogController;
@@ -44,6 +45,10 @@ Route::post('admin/reset-password-submit', [AdminLoginController::class, 'resetP
 
 Route::get('admin/profile-edit', [AdminProfileController::class, 'editProfile'])->name('editProfile')->middleware('admin:admin');
 Route::post('admin/profile-update', [AdminProfileController::class, 'updateProfile'])->name('updateProfile')->middleware('admin:admin');
+
+Route::get('admin/counter-edit', [CounterController::class, 'editCounter'])->name('editCounter')->middleware('admin:admin');
+Route::post('admin/counter-update', [CounterController::class, 'updateCounter'])->name('updateCounter')->middleware('admin:admin');
+
 
 /**
  * Frontend Route

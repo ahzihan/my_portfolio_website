@@ -14,7 +14,11 @@
         @include('front.components.Skill')
         @include('front.components.Qualification')
         @include('front.components.Service')
-        @include('front.components.Counter')
+
+    @if ($counterInfo->counter_status =='1')
+       @include('front.components.Counter')
+    @endif
+
         @include('front.components.Portfolio')
         @include('front.components.Testimonial')
         @include('front.components.Blog')

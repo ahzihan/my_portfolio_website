@@ -1,22 +1,22 @@
 <div class="home-counter">
-        <div class="container">
-            <div class="row counter-items">
-                <div class="col-md-3 counter-item">
-                    <div class="counter">500</div>
-                    <div class="text">Clients</div>
-                </div>
-                <div class="col-md-3 counter-item">
-                    <div class="counter">200</div>
-                    <div class="text">Projects</div>
-                </div>
-                <div class="col-md-3 counter-item">
-                    <div class="counter">5000</div>
-                    <div class="text">Students</div>
-                </div>
-                <div class="col-md-3 counter-item">
-                    <div class="counter">80</div>
-                    <div class="text">Products</div>
-                </div>
+    <div class="container">
+        <div class="row counter-items">
+            <div class="col-md-3 counter-item">
+                <div class="counter">{{ $counterInfo->clients_number }}</div>
+                <div class="text">{{ $counterInfo->clients_title }}</div>
+            </div>
+            <div class="col-md-3 counter-item">
+                <div class="counter">{{ $counterInfo->project_number }}</div>
+                <div class="text">{{ $counterInfo->project_title }}</div>
+            </div>
+            <div class="col-md-3 counter-item">
+                <div class="counter">{{ $counterInfo->student_number }}</div>
+                <div class="text">{{ $counterInfo->student_title }}</div>
+            </div>
+            <div class="col-md-3 counter-item">
+                <div class="counter">{{ $counterInfo->product_number }}</div>
+                <div class="text">{{ $counterInfo->product_title }}</div>
             </div>
         </div>
     </div>
+</div>
