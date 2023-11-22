@@ -18,7 +18,7 @@
                             <tbody>
                                 @foreach ($eduInfo as $edu)
                                     <tr>
-                                        <td>{{ $loop->index+1 }}</td>
+                                        <td>{{ $loop->iteration }}</td>
                                         <td>{{ $edu->course_title }}</td>
                                         <td>{{ $edu->institute }}</td>
                                         <td>{{ $edu->duration }}</td>
