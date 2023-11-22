@@ -48,7 +48,7 @@
         </li>
 
         <li class="nav-item dropdown {{ Request::is('experience.index') ? "active" : "" }}">
-            <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i><span>experience Section</span></a>
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i><span>Experience Section</span></a>
             <ul class="dropdown-menu">
                 <li class="active"><a class="nav-link" href="{{ route('experience.index') }}"><i class="fas fa-angle-right"></i> Experience List</a></li>
                 <li class="active"><a class="nav-link" href="{{ route('experience.create') }}"><i class="fas fa-angle-right"></i> Add New Experience</a></li>
