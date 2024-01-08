@@ -151,7 +151,7 @@ class TestimonialController extends Controller
         $testInfo->status = $request->status;
         $testInfo->update();
 
-        return redirect()->back()->with('success', 'Testimonial Info Updated Successfully');
+        return redirect()->route('testimonial.index')->with('success', 'Testimonial Info Updated Successfully');
 
     }
 
