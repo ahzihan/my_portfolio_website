@@ -3,31 +3,33 @@
 use App\Http\Controllers\Admin\AboutBackendController;
 use App\Http\Controllers\Admin\AdminEducationController;
 use App\Http\Controllers\Admin\AdminExperienceController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\AdminLoginController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\BackendSkillController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\CounterController;
 use App\Http\Controllers\Admin\SocialController;
+use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\BlogController;
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\PortfolioController;
 use App\Http\Controllers\Front\ServiceController;
+use Illuminate\Support\Facades\Route;
 
 /**
  * Admin Route
  */
+
 Route::resource('banner', BannerController::class);
 Route::resource('aboutInfo', AboutBackendController::class);
 Route::resource('social', SocialController::class);
 Route::resource('skill', BackendSkillController::class);
 Route::resource('education', AdminEducationController::class);
 Route::resource('experience', AdminExperienceController::class);
-
+Route::resource('testimonial', TestimonialController::class);
 
 Route::get('admin/dashboard', [AdminHomeController::class, 'index'])->name('dashboard')->middleware('admin:admin');
 
@@ -49,16 +51,13 @@ Route::post('admin/profile-update', [AdminProfileController::class, 'updateProfi
 Route::get('admin/counter-edit', [CounterController::class, 'editCounter'])->name('editCounter')->middleware('admin:admin');
 Route::post('admin/counter-update', [CounterController::class, 'updateCounter'])->name('updateCounter')->middleware('admin:admin');
 
-
 /**
  * Frontend Route
  */
 
- Route::get('/', [HomeController::class, 'HomePage'])->name('home');
- Route::get('/about', [AboutController::class, 'AboutPage'])->name('about');
- Route::get('/service', [ServiceController::class, 'ServicePage'])->name('service');
- Route::get('/blog', [BlogController::class, 'BlogPage'])->name('blog');
- Route::get('/contact', [ContactController::class, 'ContactPage'])->name('contact');
- Route::get('/portfolio', [PortfolioController::class, 'PortfolioPage'])->name('portfolio');
-
-
+Route::get('/', [HomeController::class, 'HomePage'])->name('home');
+Route::get('/about', [AboutController::class, 'AboutPage'])->name('about');
+Route::get('/service', [ServiceController::class, 'ServicePage'])->name('service');
+Route::get('/blog', [BlogController::class, 'BlogPage'])->name('blog');
+Route::get('/contact', [ContactController::class, 'ContactPage'])->name('contact');
+Route::get('/portfolio', [PortfolioController::class, 'PortfolioPage'])->name('portfolio');
