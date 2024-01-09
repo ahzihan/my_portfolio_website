@@ -36,13 +36,15 @@
                                 <div class="row">
                                     <div class="mb-4 col-md-6">
                                         <label class="form-label">Person Image</label>
-                                        <input type="file" class="form-control mt_10" name="person_image">
+                                        <input type="file" class="form-control mt_10" name="person_image"
+                                            value="{{ $testInfo->person_image }}">
                                         <img src="{{ asset('uploads/' . $testInfo->person_image) }}" alt=""
                                             style="height: 150px; width: 150px;">
                                     </div>
                                     <div class="mb-4 col-md-6">
                                         <label class="form-label">Background Image</label>
-                                        <input type="file" class="form-control mt_10" name="bg_image">
+                                        <input type="file" class="form-control mt_10" name="bg_image"
+                                            value="{{ $testInfo->bg_image }}">
                                         <img src="{{ asset('uploads/' . $testInfo->bg_image) }}" alt=""
                                             style="height: 150px; width: 150px;">
                                     </div>

@@ -34,13 +34,13 @@
                                 <div class="row">
                                     <div class="mb-4 col-md-6">
                                         <label class="form-label">Person Image</label>
-                                        <input type="file" class="form-control mt_10" name="person_image">
+                                        <input type="file" class="form-control mt_10" name="person_image"
+                                            value="{{ old('person_image') }}">
                                     </div>
                                     <div class="mb-4 col-md-6">
                                         <label class="form-label">Background Image</label>
-                                        {{-- <img src="{{ asset('uploads/' . $testiInfo->bg_image) }}" alt=""
-                                            class="w_100_p"> --}}
-                                        <input type="file" class="form-control mt_10" name="bg_image">
+                                        <input type="file" class="form-control mt_10" name="bg_image"
+                                            value="{{ old('bg_image') }}">
                                     </div>
                                 </div>
                                 <div class="row">
